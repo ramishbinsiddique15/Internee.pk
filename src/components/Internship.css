@@ -1,0 +1,133 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 20px;
+    background: linear-gradient(180deg, #43a724 0%, #43a724 100%);
+    box-shadow: 0px 16px 24px -10px rgba(207, 138, 0, 0.6);
+    border-radius: 20px;
+    padding: 50px 50px;
+    width: 83vw;
+    height: fit-content;
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+}
+
+.headings{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+}
+.headings h1{
+    font-size: 32px;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+    margin: 0px;
+}
+.cards{
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease-in-out;
+}
+.card{
+    width: 250px;
+    height: 650px;
+    background: #FFFFFF;
+    box-shadow: 0px -5px 20px -10px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0px;
+}
+.card img{
+    width: 98%;
+    padding: 30px 2px;
+}
+.card h1{
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: -1px;
+    color: #21282E;
+    font-style: normal;
+    text-align: center;
+}
+.card p{
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    /* letter-spacing: -0.3px; */
+    text-align: center;
+    padding: 0px 20px;
+    font-size: 15px;
+    line-height: 160%;
+    color: rgba(34, 34, 34, 0.7);
+}
+.card button{
+    cursor: pointer;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 10px;
+    border: none;
+    background-color: #43a724;
+    color: #fff;
+    touch-action: manipulation;
+    transition: all 0.3s;
+}
+.card button:hover{
+    background-color: #3a8e1b;
+}
+.bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.circles{
+    display: flex;
+    gap: 20px;
+}
+.circles svg{
+    cursor: pointer;
+}
+.learn p{
+    margin: 0px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 160%;
+    text-align: center;
+    letter-spacing: -0.3px;
+    color: #FFFFFF;
+}
+.circle1, .circle2, .circle3{
+    gap: 20px;
+    animation: slide 1s ;
+}
+.headings{
+    animation: slide 1s ;
+
+}
+@keyframes slide{
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-200%);
+    }
+}
+/* .circle1{
+    transform: translateX(0%);
+}
+.circle2{
+    transform: translateX(-100%);
+}
+.circle3{
+    transform: translateX(-200%);
+} */
