@@ -30,8 +30,8 @@
   }
   
   .portal-img img {
-    max-width: 608px;
-    max-height: 414px;
+    width: 608px;
+    height: 414px;
     vertical-align: middle;
     border-style: none;
     overflow-clip-margin: content-box;
@@ -124,14 +124,4 @@
     letter-spacing: -0.3px;
     text-align: left;
 
-  }
-  .Portal .portal-text .icon.animate {
-    opacity: 1;
-    transform: scale(1);
-    transition: opacity 0.5s, transform 0.5s;
-  }
-  
-  .Portal .portal-text .icon {
-    opacity: 0;
-    transform: scale(0.8);
   }

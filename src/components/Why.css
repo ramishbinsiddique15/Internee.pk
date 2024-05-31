@@ -1,0 +1,144 @@
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideOutToLeft {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  .why-img {
+    position: relative;
+    animation: float 6s ease-in-out infinite;
+    /* width: 40%; */
+    /* left: -34%; */
+  }
+  
+  .why-img img {
+    
+    width: 500px;
+    max-height: 500px;
+    vertical-align: middle;
+    border-style: none;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    position: relative;
+    right: 10%;
+  }
+  
+
+  .why-img img.animate {
+    animation: slideInFromLeft 2s forwards;
+    animation-fill-mode: backwards;
+  }
+  
+  .why-img img:not(.animate) {
+    animation: slideOutToLeft 2s forwards;
+    animation-fill-mode: backwards;
+  }
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-30px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
+  .why-img img {
+    animation: float 5s ease-in-out infinite;
+  }
+
+  .why-option{
+display: flex;
+align-items: center;
+  }
+
+
+   .why-icon{
+    border: 1.6427px solid #43a724;
+    border-radius: 13.1416px;
+    height: 60px;
+    width: 60px !important;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #ffffff;
+    overflow: hidden;
+  }
+  .why-icon::after{
+    content: "";
+    position: absolute;
+    background-color: #43a724;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+    background-blend-mode: unset;
+    width: 1.6427px;
+    height: 100%;
+    display: inline-block;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+  }
+
+  .why-option .option-txt{
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #000000;
+  }
+  .why-options{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+ 
+  .why-right .option-txt {
+  text-align: center;
+    height: 60px;
+    width: 420px;
+  }
+  
+  .why-right{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .why-right .option-txt p{
+    display: flex;
+    align-items: center;
+    /* justify-content: center;  */
+    font-size: 18px;
+    letter-spacing: -0.4px;
+    color: #21282E;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: bold;
+    line-height: 1.2;
+  }
+  .Portal .why-option .why-icon.animate {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.5s, transform 0.5s;
+  }
+  
+  .Portal .why-option .why-icon {
+    opacity: 0;
+    transform: scale(0.8);
+  }
