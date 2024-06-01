@@ -93,3 +93,38 @@
     font-family: 'Inter', sans-serif;
     font-style: italic;
 }
+
+@media screen and (max-width: 1030px) {
+    .home{
+        flex-direction: column;
+        width: 90vw;
+        margin: auto;
+    }
+    .left{
+        padding: 0px 20px;
+    }
+    .right img{
+        margin-top: 20px;
+        width: 100%;
+        height: 50%;
+    }
+    .animation p{
+        font-size: 40px;
+    }
+    .desc{
+        font-size: 15px;
+    }
+    
+    .button button{
+        padding: 10px 40px;
+    }
+    .jportal button{
+        padding: 10px 40px;
+    }
+    .lms button{
+        padding: 10px 40px;
+    }
+    .des{
+        font-size: 10px;
+    }
+}

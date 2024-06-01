@@ -96,3 +96,32 @@
     grid-gap: 10px;
     grid-auto-rows: auto;
 }
+
+@media (max-width: 768px) {
+    .up{
+        flex-direction: column;
+        padding: 20px;
+    }
+    .txt{
+        width: 100%;
+    }
+    .up div button{
+        padding: 10px;
+    }
+    .intern img{
+        height: 200px;
+    }
+    .intern h1{
+        font-size: 18px;
+    }
+    .text{
+        padding: 10px;
+    }
+    .text button{
+        padding: 10px;
+    }
+    .down{
+        padding: 0px 20px;
+        grid-template-columns: 1fr;
+    }
+}

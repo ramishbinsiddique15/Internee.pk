@@ -20,7 +20,7 @@ const Why = () => {
   ];
 
   return (
-    <div className="Portal">
+    <div className="Portal Why">
       <div className="portal-text">
         <h1>Why Internee.pk?</h1>
         <p>Streamline the approval process with your customer to quickly close the deal, get the sale, and start production.</p>

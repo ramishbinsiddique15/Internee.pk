@@ -77,3 +77,19 @@ align-items: center;
     font-weight: bold;
     line-height: 1.2;
   }
+@media screen and (max-width: 1100px){
+  .Why{
+    flex-direction: column;
+  }
+  .why-img img {
+    max-width: 100%;
+    max-height: 100%;
+    right: 1%;
+  }
+}
+  .why-text{
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+  }
+  

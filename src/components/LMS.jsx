@@ -34,7 +34,7 @@ const LMS = () => {
   ];
 
   return (
-    <div className="Portal">
+    <div className="Portal LMS">
       <div className="portal-text">
         <h5>Our LMS</h5>
         <h1>Guided Tutorials in Learning Management System</h1>

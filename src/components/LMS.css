@@ -27,3 +27,13 @@
   .lms-img img {
     animation: float 5s ease-in-out infinite;
   }
+
+  @media screen and (max-width: 1030px) {
+    .LMS{
+      flex-direction: column;
+    }
+    .lms-img img {
+      max-width: 100%;
+      max-height: 50%;
+    }
+  }

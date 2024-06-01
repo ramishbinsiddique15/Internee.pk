@@ -93,3 +93,24 @@
   text-align: left;
 
 }
+@media (max-width: 768px) {
+  .Portal{
+    flex-direction: column-reverse;
+  }
+  .portal-img img {
+    width: 100%;
+    height: auto;
+  }
+  .portal-text{
+    padding: 20px;
+  }
+  .portal-text h1{
+    font-size: 36px;
+  }
+  .portal-text p{
+    font-size: 16px;
+  }
+  .options{
+    grid-template-columns: 1fr;
+  }
+}

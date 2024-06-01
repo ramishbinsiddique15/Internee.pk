@@ -53,3 +53,14 @@
     line-height: 150%;
     font-family: Inter;
 }
+@media (max-width: 768px) {
+    .footer{
+        flex-direction: column;
+        margin: 20px 0px 0px 0px;
+        gap: 20px;
+        align-items: flex-start;
+    }
+    .footer-menu{
+        gap: 20px;
+    }
+} 

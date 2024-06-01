@@ -4,6 +4,7 @@ import job from ".././assets/img/job.png";
 import './LMS.css'
 import Aos from "aos";
 import "aos/dist/aos.css";
+import './Jobs.css'
 const Jobs = () => {
   useEffect(() => {
     Aos.init({ duration: 2000 });
@@ -33,7 +34,7 @@ const Jobs = () => {
     }
   ];
   return (
-    <div className="Portal">
+    <div className="Portal Job">
       
       <div className="portal-text">
         <h5>Already have a good skill but looking for job?</h5>

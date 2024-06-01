@@ -27,3 +27,15 @@
     color: #4A5056;
     font-family: 'Inter', sans-serif;
 }
+
+@media (max-width: 768px) {
+    .about h1{
+        font-size: 40px;
+    }
+    .about p{
+        padding: 0px 20px;
+    }
+    .about b{
+        text-align: center;
+    }
+}

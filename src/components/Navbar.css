@@ -1,64 +1,131 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
-.navbar{
-    padding: 20px 40px;
-    display : flex;
-    justify-content: space-between;
-    align-items: self-end;
+.navbar {
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end; /* Updated from align-items: self-end; */
 }
 
-.menu{
+.menu {
     display: flex;
     justify-content: space-between;
     width: 66vw;
-}
-
-.menu ul{
-    display: flex;
-    width: 36vw;
-    list-style: none;
-    justify-content: space-between;
-}
-.menu ul li a{
-    text-decoration: none;
-    color : black;
-    font-family: 'Inter', sans-serif;
-    font-weight: bold;
     transition: all 0.3s ease-in-out 0s;
+    opacity: 1;
+  }
+  
+  .menu.open {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+.menu ul {
+  display: flex;
+  flex-direction: row;
+  width: 36vw;
+  list-style: none;
+  justify-content: space-between;
 }
 
-.buttons{
-    display: flex;
-    justify-content: space-evenly;
-    width: 25vw;
+.menu ul li a {
+  text-decoration: none;
+  color: black;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700; /* Updated from font-weight: bold; */
+  transition: all 0.3s ease-in-out 0s;
 }
-.buttons button{
-    padding: 10px 20px;
-    border: none;
-    border-radius: 30px;
-    border: 2px solid #43a724;
-    font-family: 'Inter', sans-serif;
-    font-weight: bold;
-    cursor: pointer;
+
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+  width: 25vw;
+}
+
+.buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  border: 2px solid #43a724;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700; /* Updated from font-weight: bold; */
+  cursor: pointer;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.portal {
+  background-color: #43a724;
+  color: white;
+}
+
+.login {
+  background-color: white;
+  color: #43a724;
+}
+
+.menu ul li a:hover {
+  color: #6c757d;
+}
+
+.portal:hover {
+  border: 2px solid #43a724cc;
+  background-color: #43a724cc;
+}
+
+.login:hover {
+  border: 2px solid #43a724cc;
+  color: #43a724cc;
+}
+
+.hamburger {
+  display: none;
+}
+
+.close {
+  display: none;
+  position: absolute;
+  top: 0%;
+  right: 0%;
+}
+
+@media screen and (max-width: 1100px) {
+  .navbar {
+    padding: 20px 20px;
+  }
+
+  .menu {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    border: 2px solid #fff;
+    background: #ffffff;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    
+    top: 0%;
+    flex-direction: column;
+    z-index: 1;
     transition: all 0.3s ease-in-out 0s;
-}
-.portal{
-    background-color: #43a724;
-    color: white;
-}
-.login{
-    background-color: white;
-    color: #43a724;
-}
-.menu ul li a:hover{
-    color: #6c757d;
-}
+  }
 
-.portal:hover{
-    border:2px solid #43a724cc;
-    background-color: #43a724cc;
-}
-.login:hover{
-    border:2px solid #43a724cc;
-    color: #43a724cc;
+  .menu ul {
+width: 100%;
+    gap: 10px;
+    flex-direction: column;
+  }
+
+  .menu .buttons {
+    width: 50%;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .close {
+    display: block;
+  }
 }

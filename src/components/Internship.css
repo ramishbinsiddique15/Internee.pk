@@ -131,3 +131,35 @@
 .circle3{
     transform: translateX(-200%);
 } */
+
+@media (max-width: 768px) {
+    .container{
+        width: 90vw;
+        padding: 30px 30px;
+    }
+    .headings{
+        width: 100%;
+    }
+    .cards{
+        gap: 10px;
+    }
+    .card{
+        width: 200px;
+        height: 600px;
+    }
+    .card img{
+        padding: 20px 2px;
+    }
+    .card h1{
+        font-size: 18px;
+    }
+    .card p{
+        font-size: 14px;
+    }
+    .card button{
+        font-size: 12px;
+    }
+    .learn p{
+        font-size: 20px;
+    }
+}

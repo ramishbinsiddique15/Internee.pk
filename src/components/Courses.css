@@ -27,3 +27,77 @@
   .instructor-img img {
     animation: float 5s ease-in-out infinite;
   }
+@media screen and (max-width: 1100px){
+  .instructor-img img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+  .instructor-text{
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .instructor-text h5{
+    margin: 0px;
+    font-weight: bold;
+    font-family: Inter;
+    font-style: normal;
+    font-size: 20px;
+    letter-spacing: -1px;
+    color: #21282E;
+  }
+  
+  .instructor-text h1{
+    margin: 0px;
+    font-size: 48px;
+    letter-spacing: -2px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: bold;
+    color: #21282E;
+    margin: 0 0 20px 0;
+    line-height: 1.2;
+    clear: both;
+  }
+  .instructor-text p{
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    letter-spacing: -0.3px;
+    color: #21282E;
+  }
+  .instructor-text button{
+    background-color: #43a724;
+    color: #fefefe;
+    transition: all 0.1s ease-in-out 0s;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+  }
+  .instructor-text button:hover{
+    background-color: #6610f2;
+  }
+  .instructor-text h1:hover{
+    color: #6c757d;
+  }
+  .instructor-text p{
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    letter-spacing: -0.3px;
+    color: #21282E;
+  }
+  .instructor-text h1{
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    margin: 0px;
+    font-size: 20px;
+    letter-spacing: -1px;
+    font-style: normal;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
