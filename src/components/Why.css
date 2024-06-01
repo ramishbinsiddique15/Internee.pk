@@ -120,7 +120,7 @@ align-items: center;
     flex-direction: column;
     gap: 30px;
   }
-  .why-right .option-txt p{
+  .why-option .option-txt p{
     display: flex;
     align-items: center;
     /* justify-content: center;  */
@@ -132,13 +132,23 @@ align-items: center;
     font-weight: bold;
     line-height: 1.2;
   }
-  .Portal .why-option .why-icon.animate {
-    opacity: 1;
-    transform: scale(1);
-    transition: opacity 0.5s, transform 0.5s;
+  .Portal .why-icon svg{
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
   }
   
-  .Portal .why-option .why-icon {
-    opacity: 0;
-    transform: scale(0.8);
+  .Portal .why-icon svg.animate {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  .why-icon:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 20px;
+    background-color: #43a724; /* Adjust the color as needed */
   }

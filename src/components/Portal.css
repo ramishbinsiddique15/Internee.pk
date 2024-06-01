@@ -1,127 +1,137 @@
 .Portal{
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 
 @keyframes slideInFromLeft {
-    0% {
-      transform: translateX(-50%);
-    }
-    100% {
-      transform: translateX(0);
-    }
+  0% {
+    transform: translateX(-50%);
   }
-  
-  @keyframes slideOutToLeft {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
+  100% {
+    transform: translateX(0);
   }
-  
-  .portal-img {
-    position: relative;
-    animation: float 6s ease-in-out infinite;
-    /* width: 40%; */
-    /* left: -34%; */
-  }
-  
-  .portal-img img {
-    width: 608px;
-    height: 414px;
-    vertical-align: middle;
-    border-style: none;
-    overflow-clip-margin: content-box;
-    overflow: clip;
-    position: relative;
-    left: -2%;
-  }
-  
-  .portal-img img.animate {
-    animation: slideInFromLeft 2s forwards;
-    animation-fill-mode: backwards;
-  }
-  
-  .portal-img img:not(.animate) {
-    animation: slideOutToLeft 2s forwards;
-    animation-fill-mode: backwards;
-  }
-  @keyframes float {
-    0% {
-      transform: translateY(0px);
-    }
-    50% {
-      transform: translateY(-30px);
-    }
-    100% {
-      transform: translateY(0px);
-    }
-  }
-  
-  .portal-img img {
-    animation: float 5s ease-in-out infinite;
-  }
-  .portal-text{
-       padding: 100px;
-       display: flex;
-       flex-direction: column;
-  }
-  .portal-text h5{
-    margin: 0px;
-    font-weight: bold;
-    font-family: Inter;
-    font-style: normal;
-    font-size: 20px;
-    letter-spacing: -1px;
-    color: #21282E;
-  }
-  .portal-text h1{
-    margin: 0px;
-    font-size: 48px;
-    letter-spacing: -2px;
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: bold;
-    color: #21282E;
-    margin: 0 0 20px 0;
-    line-height: 1.2;
-    clear: both;
-  }
-  .portal-text p{
-    margin-bottom: 30px;
-    line-height: 150%;
-    margin-top: 0;
-    color: #717275;
-    font-size: 20px;
-    font-weight: 300;
-    font-family: "Inter";
-    font-style: normal;
-    letter-spacing: -0.3px;
-    text-align: left;
-  }
-  .option{
-    display: flex;
-    gap: 20px;
-    min-width: 40%;
-  }
-  .icon{
-    margin-top: 30px;
-  }
-  .options{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px 40px;
-  }
-  .option-txt p{
-    font-size: 16px;
-    color: #555555;
-    font-weight: 300;
-    font-family: "Inter";
-    font-style: normal;
-    letter-spacing: -0.3px;
-    text-align: left;
+}
 
+@keyframes slideOutToLeft {
+  0% {
+    transform: translateX(0);
   }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.portal-img {
+  position: relative;
+  animation: float 6s ease-in-out infinite;
+  /* width: 40%; */
+  /* left: -34%; */
+}
+
+.portal-img img {
+  width: 608px;
+  height: 414px;
+  vertical-align: middle;
+  border-style: none;
+  overflow-clip-margin: content-box;
+  overflow: clip;
+  position: relative;
+  left: -2%;
+}
+
+.portal-img img.animate {
+  animation: slideInFromLeft 2s forwards;
+  animation-fill-mode: backwards;
+}
+
+.portal-img img:not(.animate) {
+  animation: slideOutToLeft 2s forwards;
+  animation-fill-mode: backwards;
+}
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.portal-img img {
+  animation: float 5s ease-in-out infinite;
+}
+.portal-text{
+     padding: 100px;
+     display: flex;
+     flex-direction: column;
+}
+.portal-text h5{
+  margin: 0px;
+  font-weight: bold;
+  font-family: Inter;
+  font-style: normal;
+  font-size: 20px;
+  letter-spacing: -1px;
+  color: #21282E;
+}
+.portal-text h1{
+  margin: 0px;
+  font-size: 48px;
+  letter-spacing: -2px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: bold;
+  color: #21282E;
+  margin: 0 0 20px 0;
+  line-height: 1.2;
+  clear: both;
+}
+.portal-text p{
+  margin-bottom: 30px;
+  line-height: 150%;
+  margin-top: 0;
+  color: #717275;
+  font-size: 20px;
+  font-weight: 300;
+  font-family: "Inter";
+  font-style: normal;
+  letter-spacing: -0.3px;
+  text-align: left;
+}
+.option{
+  display: flex;
+  gap: 20px;
+  min-width: 40%;
+}
+.icon{
+  margin-top: 30px;
+}
+.options{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 40px;
+}
+.option-txt p{
+  font-size: 16px;
+  color: #555555;
+  font-weight: 300;
+  font-family: "Inter";
+  font-style: normal;
+  letter-spacing: -0.3px;
+  text-align: left;
+
+}
+.Portal .icon{
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.Portal .icon.animate {
+  opacity: 1;
+  transform: translateY(0px);
+}
