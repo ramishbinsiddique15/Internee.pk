@@ -1,26 +1,5 @@
-@keyframes slideInFromLeft {
-    0% {
-      transform: translateX(-50%);
-    }
-    100% {
-      transform: translateX(0);
-    }
-  }
-  
-  @keyframes slideOutToLeft {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
-  
   .instructor-img {
     position: relative;
-    animation: float 6s ease-in-out infinite;
-    /* width: 40%; */
-    /* left: -34%; */
   }
   
   .instructor-img img {
@@ -32,16 +11,6 @@
     overflow: clip;
     position: relative;
     left: -2%;
-  }
-  
-  .instructor-img img.animate {
-    animation: slideInFromLeft 2s forwards;
-    animation-fill-mode: backwards;
-  }
-  
-  .instructor-img img:not(.animate) {
-    animation: slideOutToLeft 2s forwards;
-    animation-fill-mode: backwards;
   }
   @keyframes float {
     0% {

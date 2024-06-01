@@ -1,0 +1,55 @@
+.footer{
+    display: flex;
+    margin: 100px 0px 0px 100px;
+    gap: 200px;
+    align-items: flex-start;
+}
+.footer .logo img{
+    padding-top:0px ;
+}
+.footer-menu{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+}
+.social-icons{
+    display: flex;
+    margin: 20px 0px;
+    gap: 10px;
+}
+.social h1{
+    margin: 0px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 170%;
+    color: #21282E;
+}
+.social p{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    color: #90969D;
+    white-space: nowrap;
+    letter-spacing: -0.3px;
+    line-height: 1.5;
+    margin: 10px;
+}
+.company h1{
+    margin: 0px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 170%;
+    color: #21282E;
+}
+.company p{
+    color: #4A5056;
+    font-size: 16px;
+    line-height: 150%;
+    font-family: Inter;
+}

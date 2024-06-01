@@ -11,9 +11,11 @@ import LMS from './components/LMS'
 import Courses from './components/Courses'
 import Jobs from './components/Jobs'
 import Why from './components/Why'
+import Testimonials from './components/Testimonials'
+import Footer from './components/Footer'
 function App() {
   const router = createBrowserRouter([
-    { path: '/', element:<> <Navbar /> <Home/> <About/> <Internship/> <Browse/> <Blog/> <Portal/> <LMS/> <Courses/> <Jobs/> <Why/> </>},
+    { path: '/', element:<> <Navbar /> <Home/> <About/> <Internship/> <Browse/> <Blog/> <Portal/> <LMS/> <Courses/> <Jobs/> <Why/> <Testimonials/> <Footer/> </>},
   ]
 
   )

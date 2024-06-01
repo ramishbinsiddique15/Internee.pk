@@ -1,26 +1,7 @@
-@keyframes slideInFromLeft {
-    0% {
-      transform: translateX(-50%);
-    }
-    100% {
-      transform: translateX(0);
-    }
-  }
-  
-  @keyframes slideOutToLeft {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
-  
   .why-img {
-    position: relative;
-    animation: float 6s ease-in-out infinite;
-    /* width: 40%; */
-    /* left: -34%; */
+      position: relative;
+
+      /* overflow: hidden; */
   }
   
   .why-img img {
@@ -35,31 +16,6 @@
     right: 10%;
   }
   
-
-  .why-img img.animate {
-    animation: slideInFromLeft 2s forwards;
-    animation-fill-mode: backwards;
-  }
-  
-  .why-img img:not(.animate) {
-    animation: slideOutToLeft 2s forwards;
-    animation-fill-mode: backwards;
-  }
-  @keyframes float {
-    0% {
-      transform: translateY(0px);
-    }
-    50% {
-      transform: translateY(-30px);
-    }
-    100% {
-      transform: translateY(0px);
-    }
-  }
-  
-  .why-img img {
-    animation: float 5s ease-in-out infinite;
-  }
 
   .why-option{
 display: flex;
@@ -109,17 +65,6 @@ align-items: center;
     gap: 30px;
   }
  
-  .why-right .option-txt {
-  text-align: center;
-    height: 60px;
-    width: 420px;
-  }
-  
-  .why-right{
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-  }
   .why-option .option-txt p{
     display: flex;
     align-items: center;
@@ -131,24 +76,4 @@ align-items: center;
     font-style: normal;
     font-weight: bold;
     line-height: 1.2;
-  }
-  .Portal .why-icon svg{
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
-  }
-  
-  .Portal .why-icon svg.animate {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-  .why-icon:not(:last-child)::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-    width: 2px;
-    height: 20px;
-    background-color: #43a724; /* Adjust the color as needed */
   }

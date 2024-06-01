@@ -1,11 +1,17 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import "./Home.css";
 import hero from ".././assets/img/hero.webp";
 import incubation from "../assets/img/incubation.jpg";
 import nep from "../assets/img/nep.png";
 import nic from "../assets/img/nic.png";
+import Aos from "aos";
+import "aos/dist/aos.css";
 const Home = () => {
+  useEffect(() => {
+    Aos.init();
+  }, [])
+  
   const {text} = useTypewriter({
     words: ["On your desired domain", "Gives hands-on experience", "Get a competitive job"],
     loop: true,
@@ -37,7 +43,7 @@ const Home = () => {
         </div>
       </div>
       <div className="right">
-        <img src={hero} alt="Hero" />
+        <img src={hero} alt="Hero" data-aos = "fade-up" />
       </div>
     </div>
   );

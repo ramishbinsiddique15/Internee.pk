@@ -1,55 +1,14 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import "./Portal.css";
 import lms from ".././assets/img/lms.png";
-import './LMS.css'
+import './LMS.css';
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 const LMS = () => {
-  const imgRef = useRef();
-  const iconRefs = useRef([]);
-
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("animate");
-          } else {
-            entry.target.classList.remove("animate");
-          }
-        });
-      },
-      {
-        root: null,
-        rootMargin: "0px",
-        threshold: 0.1,
-      }
-    );
-
-    if (imgRef.current) {
-      observer.observe(imgRef.current);
-    }
-    iconRefs.current.forEach((ref) => {
-      if (ref) {
-        observer.observe(ref);
-      }
-    });
-
-    return () => {
-      if (imgRef.current) {
-        observer.unobserve(imgRef.current);
-      }
-      iconRefs.current.forEach((ref) => {
-        if (ref) {
-          observer.unobserve(ref);
-        }
-      });
-    };
+    Aos.init();
   }, []);
-
-  const addIconRef = (el) => {
-    if (el && !iconRefs.current.includes(el)) {
-      iconRefs.current.push(el);
-    }
-  };
 
   const options = [
     {
@@ -73,18 +32,17 @@ const LMS = () => {
       description: "Theory is just the beginning. Our LMS goes beyond by offering practical exercises that challenge and refine your skills. Apply your knowledge in real-world scenarios, solidifying your understanding and boosting your confidence"
     }
   ];
+
   return (
     <div className="Portal">
-      
       <div className="portal-text">
         <h5>Our LMS</h5>
         <h1>Guided Tutorials in Learning Management System</h1>
-        <p>
-        Want to learn something but don't know what's the roadmap or your english is not too good? That's why we launch LMS for you.   </p>
+        <p>Want to learn something but don't know what's the roadmap or your English is not too good? That's why we launched LMS for you.</p>
         <div className="options">
           {options.map((option, index) => (
             <div className="option" key={index}>
-              <div className="icon" ref={addIconRef}>
+              <div className="icon" data-aos="fade-up">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d={option.iconPath} fill="#43a724" />
                 </svg>
@@ -98,8 +56,10 @@ const LMS = () => {
           ))}
         </div>
       </div>
-      <div className="lms-img ">
-        <img ref={imgRef} src={lms} alt="" />
+      <div className="lms-img-wrapper">
+        <div data-aos="fade-right" className="lms-img">
+          <img src={lms} alt="" />
+        </div>
       </div>
     </div>
   );

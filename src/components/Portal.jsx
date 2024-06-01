@@ -1,39 +1,12 @@
 import React, { useEffect, useRef } from "react";
 import "./Portal.css";
 import task from "../assets/img/task.png";
-
+import Aos from "aos";
+import "aos/dist/aos.css";
 const Portal = () => {
-  const imgRef = useRef();
-  const iconRefs = useRef([]);
-
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          entry.target.classList.toggle("animate", entry.isIntersecting);
-        });
-      },
-      {
-        root: null,
-        rootMargin: "0px",
-        threshold: 0.1,
-      }
-    );
-
-    if (imgRef.current) observer.observe(imgRef.current);
-    iconRefs.current.forEach((ref) => ref && observer.observe(ref));
-
-    return () => {
-      if (imgRef.current) observer.unobserve(imgRef.current);
-      iconRefs.current.forEach((ref) => ref && observer.unobserve(ref));
-    };
-  }, []);
-
-  const addIconRef = (el) => {
-    if (el && !iconRefs.current.includes(el)) {
-      iconRefs.current.push(el);
-    }
-  };
+    Aos.init();
+  }, [])
 
   const options = [
     {
@@ -60,8 +33,8 @@ const Portal = () => {
 
   return (
     <div className="Portal">
-      <div className="portal-img">
-        <img ref={imgRef} src={task} alt="Task Portal" />
+      <div className="portal-img" data-aos="fade-right">
+        <img src={task} alt="Task Portal" />
       </div>
       <div className="portal-text">
         <h5>Our own task portal</h5>
@@ -70,8 +43,8 @@ const Portal = () => {
         <div className="options">
           {options.map((option, index) => (
             <div className="option" key={index}>
-              <div className="icon" ref={addIconRef}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <div data-aos="fade-up" className="icon" >
+                <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d={option.iconPath} fill="#43a724" />
                 </svg>
               </div>
