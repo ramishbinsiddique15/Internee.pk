@@ -82,9 +82,9 @@ align-items: center;
     flex-direction: column;
   }
   .why-img img {
-    max-width: 100%;
+width: 99vw;
+margin: auto;
     max-height: 100%;
-    right: 1%;
   }
 }
   .why-text{

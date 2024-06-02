@@ -29,6 +29,9 @@
 }
 
 @media (max-width: 768px) {
+    .about{
+        width: 100vw;
+    }
     .about h1{
         font-size: 40px;
     }

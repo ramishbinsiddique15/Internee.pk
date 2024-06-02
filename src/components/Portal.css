@@ -98,11 +98,13 @@
     flex-direction: column-reverse;
   }
   .portal-img img {
-    width: 100%;
+    width: 100vw;
     height: auto;
   }
   .portal-text{
+    width: 100vw;
     padding: 20px;
+    margin-left: 10px;
   }
   .portal-text h1{
     font-size: 36px;

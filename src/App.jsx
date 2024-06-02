@@ -15,7 +15,7 @@ import Testimonials from './components/Testimonials'
 import Footer from './components/Footer'
 function App() {
   const router = createBrowserRouter([
-    { path: '/', element:<> <Navbar /> <Home/> <About/> <Internship/> <Browse/> <Blog/> <Portal/> <LMS/> <Courses/> <Jobs/> <Why/> <Testimonials/> <Footer/> </>},
+    { path: '/', element:<> <Navbar /> <Home/> <About/> <Internship/> <Browse/> <Blog/> <Portal/> <LMS/> <Courses/> <Jobs/> <Why/> <Testimonials/> <Footer/> </>}
   ]
 
   )

@@ -101,6 +101,7 @@
     .up{
         flex-direction: column;
         padding: 20px;
+        width: 100vw;
     }
     .txt{
         width: 100%;
@@ -123,5 +124,8 @@
     .down{
         padding: 0px 20px;
         grid-template-columns: 1fr;
+    }
+    .intern{
+        width: 100vw;
     }
 }

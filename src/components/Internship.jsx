@@ -1,28 +1,24 @@
-import React, { useState } from "react";
-import "./Internship.css";
+import React, {useState, useRef } from 'react';
+import './Internship.css';
+import frontEnd from '../assets/img/FrontEnd.webp';
+import cloud from '../assets/img/cloud.webp';
+import logoDesigner from '../assets/img/logo-designer.webp';
+import backend from '../assets/img/Backend.webp';
+import videoEditing from '../assets/img/videoEditing.webp';
+import mobileApp from '../assets/img/Mobile App.webp';
+import chatbot from '../assets/img/chatbot.webp';
+import digitalMarketing from '../assets/img/marketing-assistant.webp';
+import hack from '../assets/img/hack.webp';
+import technical from '../assets/img/technical.webp';
 
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
-
-
-import frontEnd from ".././assets/img/FrontEnd.webp";
-import cloud from ".././assets/img/cloud.webp";
-import logoDesigner from ".././assets/img/logo-designer.webp";
-import backend from ".././assets/img/Backend.webp";
-import videoEditing from ".././assets/img/videoEditing.webp";
-import mobileApp from ".././assets/img/Mobile App.webp";
-import chatbot from ".././assets/img/chatbot.webp";
-import digitalMarketing from ".././assets/img/marketing-assistant.webp";
-import hack from ".././assets/img/hack.webp";
-import technical from ".././assets/img/technical.webp";
-const Internship = () => {
+const Demo = () => {
+  const listRef = useRef(null);
   const [fill1, setFill1] = useState("white");
   const [fill2, setFill2] = useState("transparent");
   const [fill3, setFill3] = useState("transparent");
 
   const toggleFill1 = () => {
+    scrollToIndex(0);
     setFill1("white");
     if (fill1 === "transparent") {
       setFill2("transparent");
@@ -31,6 +27,7 @@ const Internship = () => {
   };
 
   const toggleFill2 = () => {
+    scrollToIndex(1);
     setFill2("white");
     if (fill2 === "transparent") {
       setFill1("transparent");
@@ -39,26 +36,33 @@ const Internship = () => {
   };
 
   const toggleFill3 = () => {
+    scrollToIndex(2);
     setFill3("white");
     if (fill3 === "transparent") {
       setFill1("transparent");
       setFill2("transparent");
     }
   };
-  let settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-  };
+
+  function scrollToIndex(index) {
+    const listNode = listRef.current;
+    const imgNode = listNode.querySelectorAll('li')[index];
+    imgNode.scrollIntoView({
+      behavior: 'smooth',
+      block: 'nearest',
+      inline: 'center'
+    });
+  }
+
   return (
     <div className="internship">
       <div className="container">
         <div className="top">
-          <div
-            className="headings"
-            style={{ display: fill1 === "white" ? "flex" : "none" }}
+          <ul ref={listRef} className="card-list">
+            <li>
+            <div
+            className=
+            "headings"
           >
             <h1>Get Internship In Your Favourite Domain 🙌. Almost 30+ </h1>
             <h1>
@@ -66,12 +70,10 @@ const Internship = () => {
               future👨🏼‍💻
             </h1>
           </div>
-          <div className="cards">
-            <div
-              className="circle1"
-              style={{ display: fill1 === "transparent" ? "none" : "flex" }}
-            >
-              <div className="card">
+
+
+
+          <div className="card">
                 <img src={frontEnd} />
                 <h1>Frontend Internship</h1>
                 <p>
@@ -104,12 +106,12 @@ const Internship = () => {
                 </p>
                 <button>Apply Now</button>
               </div>
-            </div>
-            <div
-              className="circle2"
-              style={{ display: fill2 === "white" ? "flex" : "none" }}
-            >
-              <div className="card">
+
+            </li>
+
+            <li>
+            
+            <div className="card">
                 <img src={backend} />
                 <h1>Backend Internship</h1>
                 <p>
@@ -159,12 +161,10 @@ const Internship = () => {
                 </p>
                 <button>Apply Now</button>
               </div>
-            </div>
-            <div
-              className="circle3"
-              style={{ display: fill3 === "white" ? "flex" : "none" }}
-            >
-              <div className="card">
+            </li>
+ 
+            <li>
+            <div className="card">
                 <img src={digitalMarketing} />
                 <h1>Digital Marketing Internship</h1>
                 <p>
@@ -210,13 +210,12 @@ const Internship = () => {
                 </p>
                 <button>Apply Now</button>
               </div>
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
-        <div className="bottom">
-          <div className="circles">
-            <svg
-              onClick={toggleFill1}
+        <div className="intern-bottom">
+        <svg
+            onClick={toggleFill1}
               width="20"
               height="20"
               xmlns="http://www.w3.org/2000/svg"
@@ -231,7 +230,7 @@ const Internship = () => {
               />
             </svg>
             <svg
-              onClick={toggleFill2}
+            onClick={toggleFill2}
               width="20"
               height="20"
               xmlns="http://www.w3.org/2000/svg"
@@ -244,9 +243,9 @@ const Internship = () => {
                 strokeWidth="1"
                 fill={fill2}
               />
-            </svg>
+            </svg>        
             <svg
-              onClick={toggleFill3}
+            onClick={toggleFill3}
               width="20"
               height="20"
               xmlns="http://www.w3.org/2000/svg"
@@ -259,20 +258,17 @@ const Internship = () => {
                 strokeWidth="1"
                 fill={fill3}
               />
-            </svg>
-          </div>
-          <div className="learn">
-            <p>
+            </svg>       
+             </div>
+             <p className='last'>
               Learn skills,{" "}
               <span>
                 <b>Market will be yours.</b>
               </span>
             </p>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
 
-export default Internship;
+export default Demo;

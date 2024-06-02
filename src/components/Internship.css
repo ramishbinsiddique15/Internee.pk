@@ -1,3 +1,22 @@
+.top{
+    display: flex;
+    overflow: hidden;
+}
+.top ul{
+    display: flex   ;
+    list-style: none;
+    gap: 20px;
+}
+.top ul li{
+    display: flex;
+    gap: 10px;
+}
+.top ul li .headings{
+    width: 235px;
+    display: flex;
+    flex-direction: column !important;
+    justify-content: space-between;
+}
 .container{
     display: flex;
     flex-direction: column;
@@ -6,8 +25,9 @@
     background: linear-gradient(180deg, #43a724 0%, #43a724 100%);
     box-shadow: 0px 16px 24px -10px rgba(207, 138, 0, 0.6);
     border-radius: 20px;
-    padding: 50px 50px;
+    padding: 20px ;
     width: 83vw;
+    margin: auto;
     height: fit-content;
 }
 .top{
@@ -17,11 +37,7 @@
 }
 
 .headings{
-    width: 400px;
     display: flex;
-    flex-direction: column;
-    gap: 50px;
-    align-items: center;
 }
 .headings h1{
     font-size: 32px;
@@ -84,10 +100,12 @@
 .card button:hover{
     background-color: #3a8e1b;
 }
-.bottom{
+.intern-bottom{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
+    gap: 20px;
 }
 .circles{
     display: flex;
@@ -96,7 +114,7 @@
 .circles svg{
     cursor: pointer;
 }
-.learn p{
+.last{
     margin: 0px;
     font-family: 'Inter', sans-serif;
     font-style: normal;
@@ -106,31 +124,6 @@
     letter-spacing: -0.3px;
     color: #FFFFFF;
 }
-.circle1, .circle2, .circle3{
-    gap: 20px;
-    animation: slide 1s ;
-}
-.headings{
-    animation: slide 1s ;
-
-}
-@keyframes slide{
-    0%{
-        transform: translateX(0%);
-    }
-    100%{
-        transform: translateX(-200%);
-    }
-}
-/* .circle1{
-    transform: translateX(0%);
-}
-.circle2{
-    transform: translateX(-100%);
-}
-.circle3{
-    transform: translateX(-200%);
-} */
 
 @media (max-width: 768px) {
     .container{
