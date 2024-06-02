@@ -76,4 +76,7 @@
     .blog-cards{
         flex-direction: column;
     }
+    .blog{
+        margin: 20px;
+    }
 }

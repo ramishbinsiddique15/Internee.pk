@@ -19,7 +19,9 @@ justify-content: space-between;
     height: 100vh;
     width: 40vw;
 }
-
+.animation{
+    height: 120px;
+}
 .animation p{
     margin: 0px;
     font-family: 'Inter', sans-serif;

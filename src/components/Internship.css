@@ -126,33 +126,24 @@
 }
 
 @media (max-width: 768px) {
-    .container{
-        width: 90vw;
-        padding: 30px 30px;
+   .top ul li .headings {
+        width: 80px;
     }
-    .headings{
-        width: 100%;
-    }
-    .cards{
-        gap: 10px;
+    .headings h1{
+        font-size: 16px;
+        width: 10%;
     }
     .card{
-        width: 200px;
-        height: 600px;
-    }
-    .card img{
-        padding: 20px 2px;
-    }
+        width: 80px;
+        height: 570px;
+    }   
     .card h1{
-        font-size: 18px;
+        font-size: 10px;
     }
     .card p{
-        font-size: 14px;
-    }
+        font-size: 8px;
+    }   
     .card button{
-        font-size: 12px;
-    }
-    .learn p{
-        font-size: 20px;
+        font-size: 8px;
     }
 }
