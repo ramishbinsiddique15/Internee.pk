@@ -11,7 +11,7 @@ import digitalMarketing from '../assets/img/marketing-assistant.webp';
 import hack from '../assets/img/hack.webp';
 import technical from '../assets/img/technical.webp';
 
-const Demo = () => {
+const Internship = () => {
   const listRef = useRef(null);
   const [fill1, setFill1] = useState("white");
   const [fill2, setFill2] = useState("transparent");
@@ -271,4 +271,4 @@ const Demo = () => {
   );
 };
 
-export default Demo;
+export default Internship;
