@@ -41,3 +41,7 @@ npm run dev
 
 ## Contributing
 Contributions are welcome! Please open an issue or submit a pull request with your changes. Make sure to follow the code style and include relevant tests.
+
+## Contact
+For any inquiries or feedback, you can reach out to me at [ramishbinsiddique24@gmail.com]
+
